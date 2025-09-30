@@ -6,4 +6,7 @@
     <event name="catalog_product_save_commit_after">
         <observer name="mageos_catalogdataai_enrich_product_async" instance="MageOS\CatalogDataAI\Observer\Product\SaveAfter" />
     </event>
+    <event name="controller_action_catalog_product_save_entity_after">
+        <observer name="mageos_catalogdataai_product_save_enrich" instance="MageOS\CatalogDataAI\Observer\ProductSaveEnrichObserver" />
+    </event>
 </config>
