@@ -10,6 +10,14 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="mageos_catalog_ai_enrich" xsi:type="object">MageOS\CatalogDataAI\Console\Command\EnrichCommand</item>
+            </argument>
+        </arguments>
+    </type>
+
     <!-- Configure parser pool with all available parsers -->
     <type name="MageOS\CatalogDataAI\Model\ParserPool">
         <arguments>
